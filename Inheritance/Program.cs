@@ -21,8 +21,23 @@ namespace Inheritance
             // Set this class to inherit from your Animal Class
 
 
+            var seagull = new Bird();
+            seagull.Color = "white";
+            seagull.isNice = false;
+            seagull.Migrates = true;
+            seagull.MakesNest = true;
+            seagull.CanFly = true;
+            seagull.BirdName = "seagull";
+
+            DescribeBird(seagull);
 
 
+            var alligator = new Reptile();
+            alligator.Name = "alligator";
+            alligator.Habitat = "swamps, rivers, and lakes";
+            alligator.Region = " the southeastern United States";
+
+            alligator.DescribeReptile();
             /*Create an object of your Bird class
              *  give values to your members using the object of your Bird class
              *  
@@ -34,6 +49,13 @@ namespace Inheritance
              *  
              * Creatively display the class member values 
              */
+            
         }
+        public static void DescribeBird(Bird bird)
+        {
+            Console.WriteLine($"The {bird.BirdName} is a {bird.Color} bird that \n" +
+                $"Can Fly: {bird.CanFly}\nMigrates: {bird.Migrates}\nMakes a nest: {bird.MakesNest}\n" +
+                $"Is kind to people: {bird.isNice}");
+            }
     }
 }
